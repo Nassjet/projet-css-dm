@@ -1,0 +1,264 @@
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Devoir à la maison</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <img src="img/logo_msp_Part.png" width="365" height="73" />
+      </div>
+
+      <div role="search" id="recherche_conteneur">
+        <form action="https://mon.service-public.fr/portail/faces/jsp/liste_res_tout.jsp" method="get">
+          <input type="text" name="fullText" id="rechercheInput" value="Rechercher" title="Rechercher" />
+          <input type="submit" value="ok" title="Lancer la recherche" id="ok_recherche" />
+        </form>
+      </div>
+    </header>
+
+    <nav>
+      <ul class="menu">
+        <li>
+          <a class="button_menu" href="/jsp/en_savoir_plus_mon_tableau_de_bord.jsp">Mon tableau de bord</a>
+          <ul class="dropdown">
+            <li>
+              <a href="jsp/mes_liaisons.jsp">&gt; Mes liaisons de comptes</a>
+            </li>
+            <li><a href="jsp/mon_calendrier.jsp">&gt; Mon calendrier</a></li>
+            <li><a href="jsp/mon_suivi.jsp">&gt; Mon suivi</a></li>
+          </ul>
+          <span class="flecheActive"></span>
+        </li>
+        <li>
+          <a class="button_menu" href="/jsp/en_savoir_plus_mes_documents.jsp">Mes documents</a>
+          <ul class="dropdown">
+            <li>
+              <a href="jsp/msp_documents.jsp">&gt; Mon porte-documents</a>
+            </li>
+            <li><a href="jsp/bloc_note.jsp">&gt; Mon bloc-notes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="button_menu" href="jsp/en_savoir_plus_mon_profils.jsp">Mon profil</a>
+          <ul class="dropdown">
+            <li><a href="jsp/mon_etat_civil.jsp">&gt; Mes coordonnées</a></li>
+            <li><a href="jsp/ma_communaute.jsp">&gt; Mes contacts</a></li>
+            <li><a href="jsp/mes_options.jsp">&gt; Mes options</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="button_menu" href="jsp/en_savoir_plus_catalogue_des_services.jsp">Catalogue des services</a>
+          <ul class="dropdown">
+            <li>
+              <a href="jsp/les_demarches.jsp?menu=true">&gt; Les démarches</a>
+            </li>
+            <li>
+              <a href="jsp/les_formulaires.jsp?menu=true">&gt; Les formulaires CERFA</a>
+            </li>
+            <li>
+              <a href="hjsp/les_partenaires.jsp?menu=true">&gt; Les organismes partenaires</a>
+            </li>
+            <li>
+              <a href="http://lannuaire.service-public.fr/" target="_blank">&gt; L'annuaire de l'administration</a>
+            </li>
+            <li>
+              <a href="http://www.service-public.fr/" target="_blank">&gt; Le guide des droits et démarches</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <ul class="indicateur">
+      <li><a href="https://mon.service-public.fr/portail/">Accueil</a></li>
+      <li>&nbsp;&gt;&nbsp;Mon tableau de bord</li>
+    </ul>
+
+    <section>
+      <main>
+        <h1>Mon tableau de bord</h1>
+        <div>
+          Découvrez ci-dessous ce que vous pouvez faire dans la rubrique « Mon
+          tableau de bord ».
+        </div>
+        <div class="container">
+          <div class="row article">
+            <div class="col-md-4">
+              <a href="jsp/mes_liaisons.jsp"><img src="img/402_429_Liaisons.JPG" width="60" height="60" />Mes liaisons de
+                comptes</a>
+              <ul>
+                <li>
+                  Accédez d'un clic à vos comptes administratifs sans ressaisir
+                  vos identifiants et mots de passe.
+                </li>
+                <li>Gérez vos liaisons de comptes.</li>
+              </ul>
+            </div>
+        
+            <div class="col-md-4">
+              <a href="jsp/mon_calendrier.jsp"><img src="img/605_403_418_picto_agenda.gif" width="60" height="60" />Mon
+                calendrier
+              </a>
+              <ul>
+                <li>
+                  Notez et visualisez toutes vos échéances administratives.
+                </li>
+                <li>
+                  Recevez des alertes par courriel pour vos rappels d'échéances.
+                </li>
+              </ul>
+            </div>
+        
+            <div class="col-md-4">
+              <a href="jsp/mon_suivi.jsp"><img src="img/401_430_suivi.jpg" width="60" height="60" />Mon suivi</a>
+              <ul>
+                <li>Suivez l'avancement de vos démarches en ligne.</li>
+                <li>Consultez les messages envoyés.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+      </main>
+
+      <aside>
+        <div class="astuces">
+          <h3 class="title_astuces">LES ASTUCES</h3>
+          <ul>
+            <li>
+              <a href="jsp/authent/page_detail_astuce_MSP.jsp?idAstuce=1001" target="_self"
+                title="Lien vers Accédez depuis mon.service-public.fr à une nouvelle génération de démarches en ligne">Accédez
+                depuis mon.service-public.fr à une nouvelle
+                génération de démarches en ligne</a>
+            </li>
+          </ul>
+          <div class="all_astuces">
+            <a href="jsp/authent/toutes_astuces_msp.jsp">Toutes les astuces</a>
+          </div>
+        </div>
+        <div class="actualites">
+          <h3 class="title_actualites">Les actualités</h3>
+          <ul>
+            <li>
+              <a href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11644"
+                title="Lien vers Votre avis nous intéresse…"><span class="date">22/10/2012</span> Que pensez-vous de MSP
+                ?</a>
+            </li>
+            <li>
+              <a href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11823"
+                title="Lien vers Une nouvelle démarche dans le Tarn"><span class="date">10/10/2012</span> Le Conseil
+                général du
+                Tarn vient de déployer, une nouvelle téléprocédure .</a>
+            </li>
+            <li>
+              <a href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11643"
+                title="Lien vers Déclarez en ligne le décès d'un proche "><span class="date">30/07/2012</span> Une
+                nouvelle démarche en
+                ligne sur MSP</a>
+            </li>
+            <li>
+              <a href="jsp/authent/page_detail_actualite_MSP.jsp?idActu=11631"
+                title="Lien vers Pour les départements numérotés de 50 à 974 il ne vous reste que quelques jours pour télé-déclarer vos revenus"><span
+                  class="date">15/06/2012</span> Accédez à votre
+                déclaration de revenus depuis MSP</a>
+            </li>
+          </ul>
+          <div class="all_actualites">
+            <a href="jsp/authent/tout_actualites_msp.jsp">Toutes les actualités</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="container">
+      <div class="row">
+        <!-- OJD Logo -->
+        <div class="col-md-2 col-12">
+          <ul>
+            <li>
+              <span>
+                <img src="img/logo-ojd.png" alt="logo du OJD" />
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Assistance et contact -->
+        <div class="col-md-2 col-12">
+          <p>Assistance et contact</p>
+          <ul>
+            <li><a href="jsp/authent/plan_du_site.jsp">Plan du site</a></li>
+            <li><a href="jsp/authent/contact.jsp">Contact</a></li>
+            <li><a href="jsp/authent/aide.jsp">Aide</a></li>
+            <li><a href="jsp/authent/faqs.jsp">Questions fréquentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Informations légales -->
+        <div class="col-md-2 col-12">
+          <p>Informations légales</p>
+          <ul>
+            <li>
+              <a href="jsp/authent/mentions_legales.jsp">Mentions légales</a>
+            </li>
+            <li>
+              <a href="jsp/authent/conditions_generales_utilisation.jsp">Conditions générales d'utilisation</a>
+            </li>
+            <li>
+              <a href="http://www.service-public.fr/%C3%A0-propos-du-site/001371.html" target="_blank">Répertoire des
+                informations publiques</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Qualité de service -->
+        <div class="col-md-2 col-12">
+          <p>Qualité de service</p>
+          <ul>
+            <li><a href="jsp/authent/accessibilite.jsp">Accessibilité</a></li>
+            <li><a href="jsp/authent/securite.jsp">Sécurité</a></li>
+            <li>
+              <a href="jsp/authent/engagement_qualite.jsp">Engagement qualité</a>
+            </li>
+            <li><a href="jsp/authent/statistiques.jsp">Statistiques</a></li>
+          </ul>
+        </div>
+
+        <!-- Partenariat -->
+        <div class="col-md-2 col-12">
+          <p>Partenariat</p>
+          <ul>
+            <li>
+              <a href="jsp/authent/partenaires.jsp">Nos organismes partenaires</a>
+            </li>
+            <li>
+              <a href="jsp/authent/devenir_partenaire.jsp">Devenir partenaire ?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 text-center mt-3 copyrights">
+          <p>
+            <a target="_blank" href="jsp/authent/a_propos_de_la_DGME.jsp">Tous droits réservés - Direction Générale de
+              Modernisation de
+              l'Etat - 2012</a>
+            |
+            <a href="jsp/authent/a_propos_du_site.jsp">A propos de mon.service-public.fr</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+body {
+  margin: 1vw;
+}
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribue les deux div aux extrémités */
+    align-items: center; /* Centre verticalement les éléments */
+    padding: 10px; /* Optionnel, ajoute un peu d'espace à l'intérieur du header */
+    font-family: sans-serif;
+  }
+nav {
+    width: 100%;
+}
+nav a {
+  color: blue ;
+  height: 100%;
+}
+ul.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+}
+nav ul {
+  list-style: none;
+}
+nav li {
+  flex: 1;
+  height: 2em;
+  background-color: white;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 2;
+  box-sizing: border-box;
+}
+
+
+ul.dropdown {
+  position: relative;
+  display:none; 
+}
+.menu>li:hover ul.dropdown {
+  /* appraition du sous-menu au survol de son entete */
+      display: block;
+  }
+.button_menu {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(to bottom, rgb(200, 255, 255), white, rgb(180, 255, 255));
+  border-bottom: solid 1px blue;
+  font-size: large;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.indicateur {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-left: 15px;
+}
+
+/* Mise en page de la section avec Flexbox */
+section {
+  display: flex; /* Active Flexbox pour la section */
+  justify-content: space-between; /* Place main à gauche et aside à droite */
+  padding: 10px;
+
+}
+
+/* Styles supplémentaires pour le titre */
+section h1 {
+  color: white;
+  background-color: #0e5f96;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding-left: 40px;
+  font-family: Arial;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* Le main prend 70% de la largeur, aside 30% */
+main {
+  flex: 0 1 70%; /* Le main prend 70% de la largeur disponible */
+  padding-right: 5px; /* Ajoute un espace à droite pour aérer */
+  border-bottom: groove 2px gray;
+  border-radius: 10px;
+}
+.date {
+  color: #9c2f03;
+}
+
+.article {
+  display: flex;
+  align-items: space-between;
+}
+.article li {
+  list-style: none;
+}
+.article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none; /* Optionnel : retire le soulignement du lien */
+}
+.article ul {
+  list-style: none;
+  padding-left: 70px; /* Ajuste la valeur selon la taille de l'image */
+  margin-top: 10px; /* Pour ajouter un léger espacement en haut */
+}
+
+.article img {
+  margin-right: 10px; /* Ajoute un espace entre l'image et le texte */
+}
+aside {
+  flex: 0 1 30%; /* L'aside prend 30% de la largeur disponible */
+  padding-left: 5px; /* Ajoute un espace à gauche pour séparer du main */
+  background-color: #f4f4f4; /* Optionnel : un fond pour l'aside */    
+}
+.title_astuces {
+  color: white;
+  background-color: #0e5f96;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: Arial;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 9;
+}
+
+.title_actualites {
+  color: white;
+  background-color: #9c2f03;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: Arial;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 9;
+}
+
+.astuces div{
+  border-bottom: groove 2px gray;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.actualites div {
+  border-bottom: groove 2px gray;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.astuces ul {
+  list-style: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.actualites ul {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.astuces li a {
+  color: black;
+  text-decoration: none;
+}
+.actualites li a {
+  color: black;
+  text-decoration: none;
+}
+.all_astuces, .all_actualites {
+  text-align: right;           /* Aligne le texte à droite */
+  padding: 10px;      /* Ajoute du padding autour */
+  color: black;               
+}
+
+.all_astuces a, .all_actualites a {
+  color: #0e5f96;              /* Change la couleur du texte */
+  text-decoration: none;        /* Supprime le soulignement */
+}
+
+.all_actualites a {
+  color: #9c2f03;              /* Change la couleur du texte */
+  text-decoration: none;        /* Supprime le soulignement */
+}
+.all_astuces a:hover, .all_actualites a:hover {
+  text-decoration: underline;   /* Facultatif : ajoute un soulignement au survol */
+}
+
+.copyrights {
+  background-color: #00327b; /* Couleur de fond */
+  border-bottom-left-radius: 10px; /* Arrondi en bas à gauche */
+  border-bottom-right-radius: 10px; /* Arrondi en bas à droite */
+  padding: 10px; /* Ajoute un peu de padding pour plus d'espace */
+  color: white; /* Texte blanc pour un bon contraste */
+  text-decoration: none;
+}
+
+.copyrights a {
+  color: white; /* Texte des liens en blanc */
+  text-decoration: none; /* Facultatif : enlève le soulignement */
+}
+
+footer {
+  background-color: #008bd3;
+  color: white;
+}
+
+footer a {
+  color: white; /* Texte des liens en blanc */
+  text-decoration: none; /* Facultatif : enlève le soulignement */
+}
+
+.button_menu:hover {
+  background-color: #0073aa;
+  color: rgb(161, 28, 28);
+}
+
+.col-md-2 p{
+  font-weight: bold;
+}
+
+/* Mobile-first approach */
+
+/* Pour les écrans de moins de 768px */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Les éléments du header se mettent en colonne */
+    text-align: center;
+  }
+
+  nav ul.menu {
+    flex-direction: column; /* Les éléments du menu passent en colonne */
+  }
+
+  /* Ajustement du formulaire de recherche */
+  #rechercheInput {
+    width: 100%; /* Le champ de recherche prend toute la largeur */
+    margin-bottom: 10px; /* Ajout d'espacement sous le champ */
+  }
+
+  .article img {
+    width: 50px; /* Réduit la taille des images des articles */
+    height: 50px;
+  }
+
+  section {
+    flex-direction: column; /* Les éléments main et aside passent en colonne */
+  }
+
+  main {
+    flex: 0 1 100%; /* Main prend 100% de la largeur sur mobile */
+    padding: 0;
+  }
+
+  aside {
+    flex: 0 1 100%; /* Aside prend 100% de la largeur sur mobile */
+    margin-top: 20px; /* Ajoute un espacement en haut */
+  }
+
+  footer .row {
+    flex-direction: column; /* Les éléments du footer passent en colonne */
+    text-align: center;
+  }
+}
+
+/* Pour les écrans entre 768px et 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav ul.menu {
+    flex-direction: row; /* Les éléments du menu restent en ligne */
+  }
+
+  section {
+    flex-direction: row; /* Main et aside restent côte à côte */
+  }
+
+  .article img {
+    width: 60px; /* Taille standard des images sur les tablettes */
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Réduit légèrement la taille des textes */
+  }
+
+  .article a {
+    font-size: 16px; /* Réduit les liens des articles */
+  }
+
+  footer {
+    font-size: 12px; /* Texte du footer plus petit sur mobile */
+  }
+}
+@media (max-width: 768px) {
+  .indicateur {
+    display: none; /* Cache la barre d'indicateur sur mobile */
+  }
+}
+#recherche_conteneur {
+  display: flex;           /* Active Flexbox pour aligner les éléments */
+  align-items: center;     /* Aligne les éléments verticalement au centre */
+  justify-content: flex-end; /* Optionnel : permet d'aligner à droite */
+}
+
+#rechercheInput {
+  margin-right: 10px;      /* Ajoute un espace entre l'input et le bouton */
+  padding: 5px;            /* Ajoute un peu d'espace à l'intérieur de l'input */
+  width: 200px;            /* Ajuste la largeur de l'input */
+}
+
+#ok_recherche {
+  padding: 5px 10px;       /* Ajoute du padding autour du texte du bouton */
+  cursor: pointer;         /* Change le curseur au survol */
+}
