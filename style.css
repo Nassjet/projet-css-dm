@@ -97,24 +97,35 @@ main {
 
 .article {
   display: flex;
-  align-items: space-between;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.article li {
-  list-style: none;
+
+.article .col-md-4 {
+  display: flex;
+  flex-direction: column; /* Assure que l'image et les éléments sont en colonne */
+  align-items: flex-start; /* Aligne tout à gauche */
 }
+
 .article a {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   text-decoration: none; /* Optionnel : retire le soulignement du lien */
+  margin-bottom: 10px; /* Ajoute un espace entre le lien et la liste */
 }
+
 .article ul {
   list-style: none;
-  padding-left: 70px; /* Ajuste la valeur selon la taille de l'image */
-  margin-top: 10px; /* Pour ajouter un léger espacement en haut */
+  margin-top: 10px; /* Ajoute un léger espacement en haut */
+  padding-left: 0; /* Aligne la liste par rapport à l'image */
 }
 
 .article img {
   margin-right: 10px; /* Ajoute un espace entre l'image et le texte */
+}
+
+.article li {
+  margin-bottom: 5px; /* Ajoute un espace entre chaque élément de la liste */
 }
 aside {
   flex: 0 1 30%; /* L'aside prend 30% de la largeur disponible */
@@ -278,8 +289,8 @@ footer a {
   }
 
   .article img {
-    width: 60px; /* Taille standard des images sur les tablettes */
-    height: 60px;
+    width: 50px; /* Taille standard des images sur les tablettes */
+    height: 50px;
   }
 }
 @media (max-width: 768px) {
@@ -287,17 +298,19 @@ footer a {
     font-size: 14px; /* Réduit légèrement la taille des textes */
   }
 
+  .article {
+    flex-direction: column; /* Les articles se mettent en colonne sur petit écran */
+  }
+
+  .article .col-md-4 {
+    margin-bottom: 20px; /* Ajoute un espacement entre chaque article */
+  }
   .article a {
     font-size: 16px; /* Réduit les liens des articles */
   }
 
   footer {
     font-size: 12px; /* Texte du footer plus petit sur mobile */
-  }
-}
-@media (max-width: 768px) {
-  .indicateur {
-    display: none; /* Cache la barre d'indicateur sur mobile */
   }
 }
 #recherche_conteneur {
