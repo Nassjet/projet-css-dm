@@ -2,6 +2,13 @@ body {
   margin: 1vw;
 }
 
+/* Assurer que les images s'adaptent à leur conteneur */
+img {
+  max-width: 100%; /* L'image ne dépassera jamais la largeur de son conteneur */
+  height: auto;    /* Maintient le ratio de l'image */
+  display: flex;
+  justify-content: flex-start;
+}
 
 header {
     display: flex;
@@ -12,7 +19,7 @@ header {
     font-family: sans-serif;
   }
 nav {
-    width: 100%;
+  width: 100%;
 }
 nav a {
   color: blue ;
@@ -33,10 +40,42 @@ nav li {
   background-color: white;
   padding: 0;
 }
+nav li a {
+  text-decoration: none;
+  font-size: 13px;
+}
 * {
   margin: 0;
   padding: 2;
   box-sizing: border-box;
+}
+
+#recherche_conteneur {
+  display: flex;
+  align-items: center;
+}
+
+#rechercheInput {
+  border: 1px solid #ccc;
+  font-size: 14px;
+  border-radius: 2px 0 0 2px; /* Bord arrondi sur la gauche */
+  height: 30px;
+
+}
+
+#ok_recherche {
+  border: 1px solid #ccc;
+  border-left: none; /* Pour fusionner les deux champs */
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 2px; /* Bord arrondi sur la droite */
+  height: 30px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+#ok_recherche:hover {
+  background-color: #e0e0e0;
 }
 
 
@@ -132,7 +171,11 @@ aside {
   padding-left: 5px; /* Ajoute un espace à gauche pour séparer du main */
   background-color: #f4f4f4; /* Optionnel : un fond pour l'aside */    
 }
-.title_astuces {
+
+main h1 {
+  font-size: 13px;
+}
+aside h3 {
   color: white;
   background-color: #0e5f96;
   border-top-left-radius: 10px;
@@ -140,18 +183,11 @@ aside {
   font-family: Arial;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 9;
+  font-size: 13px;
+  padding: 4
 }
-
 .title_actualites {
-  color: white;
   background-color: #9c2f03;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  font-family: Arial;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 9;
 }
 
 .astuces div{
