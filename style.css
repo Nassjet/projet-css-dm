@@ -6,8 +6,6 @@ body {
 img {
   max-width: 100%; /* L'image ne dépassera jamais la largeur de son conteneur */
   height: auto;    /* Maintient le ratio de l'image */
-  display: flex;
-  justify-content: flex-start;
 }
 
 header {
@@ -15,9 +13,31 @@ header {
     flex-wrap: wrap;
     justify-content: space-between; /* Distribue les deux div aux extrémités */
     align-items: center; /* Centre verticalement les éléments */
-    padding: 10px; /* Optionnel, ajoute un peu d'espace à l'intérieur du header */
     font-family: sans-serif;
   }
+  #recherche_conteneur {
+    display: flex; /* Utilise Flexbox pour organiser les éléments de la recherche */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: flex-end; /* Aligne les éléments à droite */
+}
+
+#rechercheInput {
+    border: 1px solid #ccc; /* Ajoute une bordure grise claire autour de l'input */
+    border-radius: 4px; /* Arrondit légèrement les coins de l'input */
+    font-size: 0.9em; /* Ajuste la taille de la police à 90% de la taille normale */
+    padding: 7px; /* Ajoute un padding interne de 7px pour plus de confort */
+    flex-grow: 1; /* Permet à l'input de prendre tout l'espace disponible */
+}
+
+#ok_recherche {
+    padding: 7px 11px; /* Ajoute un padding interne vertical de 7px et horizontal de 11px */
+    background-color: #007acb; /* Définit la couleur de fond en bleu */
+    color: white; /* Texte en blanc */
+    border: 1px solid #005f9e; /* Ajoute une bordure bleue foncée */
+    cursor: pointer; /* Change le curseur en forme de main au survol */
+    border-radius: 4px; /* Arrondit légèrement les coins du bouton */
+    font-size: 0.9em; /* Taille du texte plus petite pour meilleure lisibilité */
+}
 nav {
   width: 100%;
 }
@@ -26,10 +46,13 @@ nav a {
   height: 100%;
 }
 ul.menu {
+  padding: 0;
+  margin: 0;
+  margin-top:1em;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 nav ul {
   list-style: none;
@@ -38,47 +61,12 @@ nav li {
   flex: 1;
   height: 2em;
   background-color: white;
-  padding: 0;
 }
 nav li a {
   text-decoration: none;
   font-size: 13px;
+  padding-left: 10px;
 }
-* {
-  margin: 0;
-  padding: 2;
-  box-sizing: border-box;
-}
-
-#recherche_conteneur {
-  display: flex;
-  align-items: center;
-}
-
-#rechercheInput {
-  border: 1px solid #ccc;
-  font-size: 14px;
-  border-radius: 2px 0 0 2px; /* Bord arrondi sur la gauche */
-  height: 30px;
-
-}
-
-#ok_recherche {
-  border: 1px solid #ccc;
-  border-left: none; /* Pour fusionner les deux champs */
-  padding: 5px 10px;
-  font-size: 14px;
-  border-radius: 2px; /* Bord arrondi sur la droite */
-  height: 30px;
-  background-color: #f5f5f5;
-  cursor: pointer;
-}
-
-#ok_recherche:hover {
-  background-color: #e0e0e0;
-}
-
-
 ul.dropdown {
   position: relative;
   display:none; 
@@ -98,18 +86,20 @@ ul.dropdown {
 }
 
 .indicateur {
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   list-style: none;
   padding-left: 15px;
+  margin: 1em;
+  font-size: small;
 }
 
 /* Mise en page de la section avec Flexbox */
 section {
   display: flex; /* Active Flexbox pour la section */
   justify-content: space-between; /* Place main à gauche et aside à droite */
-  padding: 10px;
-
 }
 
 /* Styles supplémentaires pour le titre */
@@ -122,6 +112,7 @@ section h1 {
   font-family: Arial;
   font-weight: bold;
   text-transform: uppercase;
+  padding: 4;
 }
 /* Le main prend 70% de la largeur, aside 30% */
 main {
@@ -129,9 +120,16 @@ main {
   padding-right: 5px; /* Ajoute un espace à droite pour aérer */
   border-bottom: groove 2px gray;
   border-radius: 10px;
+  height:45%;
+  font-size: small;
+}
+.decouvrez {
+  color: #0e5f96;
+  margin-bottom:1em;
 }
 .date {
   color: #9c2f03;
+  font-weight: bold;
 }
 
 .article {
@@ -170,10 +168,12 @@ aside {
   flex: 0 1 30%; /* L'aside prend 30% de la largeur disponible */
   padding-left: 5px; /* Ajoute un espace à gauche pour séparer du main */
   background-color: #f4f4f4; /* Optionnel : un fond pour l'aside */    
+  font-size: small;
 }
 
 main h1 {
   font-size: 13px;
+  padding-left: 2em;
 }
 aside h3 {
   color: white;
@@ -184,7 +184,8 @@ aside h3 {
   font-weight: bold;
   text-transform: uppercase;
   font-size: 13px;
-  padding: 4
+  padding: 4;
+  padding-left:2em;
 }
 .title_actualites {
   background-color: #9c2f03;
@@ -194,11 +195,13 @@ aside h3 {
   border-bottom: groove 2px gray;
   border-radius: 10px;
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 .actualites div {
   border-bottom: groove 2px gray;
   border-radius: 10px;
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 .astuces ul {
   list-style: none;
@@ -232,6 +235,7 @@ aside h3 {
 .all_actualites a {
   color: #9c2f03;              /* Change la couleur du texte */
   text-decoration: none;        /* Supprime le soulignement */
+  font-weight: bold;
 }
 .all_astuces a:hover, .all_actualites a:hover {
   text-decoration: underline;   /* Facultatif : ajoute un soulignement au survol */
@@ -254,12 +258,22 @@ aside h3 {
 footer {
   background-color: #008bd3;
   color: white;
+  padding-top: 1em;
+  font-size: 0.8em;
+  border-radius: 0 0 10px 10px;
 }
 
 footer a {
   color: white; /* Texte des liens en blanc */
   text-decoration: none; /* Facultatif : enlève le soulignement */
 }
+footer div p {
+  font-weight: bold;
+}
+footer ul li.OJD {
+  list-style: none;
+}
+
 
 .button_menu:hover {
   background-color: #0073aa;
