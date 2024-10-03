@@ -159,6 +159,7 @@ main {
 
 .article img {
   margin-right: 10px; /* Ajoute un espace entre l'image et le texte */
+  object-fit: cover;
 }
 
 .article li {
