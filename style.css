@@ -65,7 +65,6 @@ nav li {
 nav li a {
   text-decoration: none;
   font-size: 13px;
-  padding-left: 10px;
 }
 ul.dropdown {
   position: relative;
@@ -116,7 +115,7 @@ section h1 {
 }
 /* Le main prend 70% de la largeur, aside 30% */
 main {
-  flex: 0 1 70%; /* Le main prend 70% de la largeur disponible */
+  flex: 0 1 100%; /* Le main prend 70% de la largeur disponible */
   padding-right: 5px; /* Ajoute un espace à droite pour aérer */
   border-bottom: groove 2px gray;
   border-radius: 10px;
@@ -165,6 +164,10 @@ main {
 .article li {
   margin-bottom: 5px; /* Ajoute un espace entre chaque élément de la liste */
 }
+main h1 {
+  font-size: 13px;
+  padding-left: 2em;
+}
 aside {
   flex: 0 1 30%; /* L'aside prend 30% de la largeur disponible */
   padding-left: 5px; /* Ajoute un espace à gauche pour séparer du main */
@@ -172,10 +175,7 @@ aside {
   font-size: small;
 }
 
-main h1 {
-  font-size: 13px;
-  padding-left: 2em;
-}
+
 aside h3 {
   color: white;
   background-color: #0e5f96;
