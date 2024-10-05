@@ -31,12 +31,15 @@ Ici nous allons aborder chaque section de la page et expliquer quels ont été l
 - **Header :**
 
   - Pour le header on gère d'abord l'image:
+  
     ![screen de img en css](screens/img.png)
 
   - Ensuite on gère le header en mettant une flexbox et séparant les éléments de part et d'autres de chaque côté:
+
     ![screen de header en css](screens/header.png)
 
   - Puis on modifie la barre de recherche et le bouton OK:
+
     ![screen de recherche en css](screens/recherche.png)
 
 Ainsi on termine le header en utilisant Flexbox. Grâce aux propriétés css on a gérer le responsif du header, et on a modifier l'apparence des éléments de sorte à que ça ressemble à la version originale
@@ -45,17 +48,21 @@ Ainsi on termine le header en utilisant Flexbox. Grâce aux propriétés css on 
 
   - Pour la navbar, on fixe tout l'élément avec un `width: 100%` de sorte à que la navbar prend toute la largeur, ensuite on définie des propriétés pour tout les éléments li du ul dans la navbar grâce à la class `ul.menu`.
     La navbar étant constitué de plusieurs liste désordonnées différentes on est obligé de faire des petits changements de manière précises pour que ça ne s'affecte pas à tout les éléments.
+
     ![screen de recherche en css](screens/navbar.png)
 
 - **Section Principal :**
 
   - Pour La section principal, il a fallut gérer l'espacement du main et du aside, donc voici pour le code css pour la section:
+
     ![screen de section en css](screens/section.png)
 
   - Ensuite il faut gérer le main, son style et son alignement à la navbar et au header, ici on préfére utiliser des class personnalisés pour la clareté de ce qu'on vise, on définit la largeur du main de 100% de sorte à que le main prenne tout l'espace disponible et soit aligné aux 3 premiers `ul a` :
+
     ![screen de main en css](screens/main.png)
 
   - Et pour le aside, c'est quasiment la même personnalisation mais on vise des éléments différents avec des class différentes pour par exemple faire en sorte que l'élement p "Toutes les astuces" et "Toutes les actualités" ne soient pas de la même couleur.
+
     ![screen de aside en css](screens/aside.png)
 
 - **Footer :**
@@ -66,6 +73,7 @@ Ainsi on termine le header en utilisant Flexbox. Grâce aux propriétés css on 
     ![screen de footer en css](screens/footer_css.png)
 
     - Voici le footer html pour la grille **Bootstrap** :
+
     ![screen de footer en css](screens/footer_html.png)
 
 ### Réactivité et Adaptation Mobile
